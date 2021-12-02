@@ -1,0 +1,67 @@
+/* Navbar Styles */
+
+.navbar {
+	height: calc(100vh - 1rem);
+	width: 4.5rem;
+}
+
+.icons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	list-style: none;
+	color: var(--primary-text);
+}
+
+.icons a {
+	position: relative;
+	display: flex;
+	font-size: 1.5rem;
+	font-weight: 400;
+	width: 3rem;
+	height: 3rem;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--main-bg-color);
+	border-radius: 50%;
+	margin: 0.5rem 0 0 0;
+	transition: var(--transition);
+}
+
+.icons a:hover,
+.active {
+	border-radius: 35% !important;
+	background-color: var(--primary-accent) !important;
+	color: white;
+	cursor: pointer;
+}
+
+.active::before,
+.icons > a:hover::before {
+	content: '';
+	position: absolute;
+	height: 75%;
+	background-color: white;
+	width: 0.35rem;
+	left: -11px;
+	border-radius: 0 10px 10px 0;
+	transition: var(--transition);
+	animation: nav-hover 250ms;
+}
+
+.icons > a:hover::before {
+	transition: var(--transition);
+	height: 35%;
+}
+
+.divider {
+	border: 1px solid var(--main-bg-color);
+	width: 50%;
+	margin-top: 0.6rem;
+}
+
+@keyframes nav-hover {
+	from {
+		height: 0;
+	}
+}

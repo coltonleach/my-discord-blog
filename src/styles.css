@@ -1,0 +1,53 @@
+/* Resets, Variables, Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+
+:root {
+    --primary-text: rgb(255, 255, 255);
+    --secondary-text: rgb(114, 118, 125);
+    --tag-text: rgb(185, 187, 190);
+    --chat-text: rgb(114, 118, 125);
+    --message-text: rgb(220, 221, 222);
+    --primary-accent: rgb(88, 101, 242);
+    --bg-color: rgb(32, 34, 37);
+    --sidebar-bg-color: rgb(47, 49, 54);
+    --sidebar-hover: rgb(49, 52, 58);
+    --main-bg-color: rgb(54, 57, 63);
+    --footer-bg-color: rgb(35, 39, 42);
+    --chat-bg-color: rgba(255, 255, 255, 0.05);
+    --green: rgb(67, 181, 129);
+    --transition: all ease 250ms;
+}
+
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: #fff;
+    height: calc(100vh - 1rem);
+    font-family: sans-serif;
+}
+
+body::before {
+    content: "CL Blog";
+    position: absolute;
+    font-size: 0.6rem;
+    font-family: 'Seymour One', sans-serif;
+    padding: 0.25rem 0.6rem;
+    color: #72767D;
+}
+
+#root {
+    display: flex;
+    position: relative;
+    top: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

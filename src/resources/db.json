@@ -1,0 +1,74 @@
+{
+	"blogs": [
+		{
+			"id": 0,
+			"title": "welcome",
+			"body": "Welcome to my new website! My name is Colton Leach, and this has been a crazy cool project specifically for learning React.",
+			"date": "October 24th, 2021",
+			"section": "home"
+		},
+		{
+			"id": 1,
+			"title": "start of a new project",
+			"body": "This is gonna be a piece of cake.",
+			"date": "October 24th, 2021",
+			"section": "blog"
+		},
+		{
+			"id": 2,
+			"title": "i need a stamina elixir",
+			"body": "Alright, this is a bit tougher than anticipated",
+			"date": "October 28th, 2021",
+			"section": "blog"
+		},
+		{
+			"id": 3,
+			"title": "im in too deep",
+			"body": "What have I got myself into?",
+			"date": "October 30th, 2021",
+			"section": "blog"
+		},
+		{
+			"id": 4,
+			"title": "everything is fine",
+			"body": "This project might actually be a perfect idea.",
+			"date": "November 3rd, 2021",
+			"section": "blog"
+		},
+		{
+			"id": 5,
+			"title": "state management is tough",
+			"body": "Learning to properly manage the state between sibling components is making this project a roller coaster.",
+			"date": "November 5th, 2021",
+			"section": "blog"
+		},
+		{
+			"id": 6,
+			"title": "taking a break from this project",
+			"body": "Im going to take a break to focus on class, will come back and complete it. Its basically 90% finish, and its looking so good.",
+			"date": "November 8th, 2021",
+			"section": "blog"
+		},
+		{
+			"id": 7,
+			"title": "and im back",
+			"body": "Oh man, I dont even recognize this project anymore. This might take a while to get back in the groove of things.",
+			"date": "November 28th, 2021",
+			"section": "blog"
+		},
+		{
+			"id": 8,
+			"title": "a new approach",
+			"body": "I have finally accepted that the original approach I took was a bit too advanced for me, so Im now going to do the appropriate thing and finish it the way I know can be done, then come back and complete it the original way I want to.",
+			"date": "November 28th, 2021",
+			"section": "blog"
+		},
+		{
+			"id": 9,
+			"title": "a new approach",
+			"body": "I finally fixed my problem I was having when selecting a channel, as well as the message styling. It's all uphill from here! I should be able to finish this project soon 🥳",
+			"date": "November 30th, 2021",
+			"section": "blog"
+		}
+	]
+}

@@ -1,0 +1,41 @@
+/* Footer styles */
+
+.footer {
+    position: absolute;
+    display: flex;
+    background-color: var(--footer-bg-color);
+    padding: 0 0.5rem;
+    align-items: center;
+    bottom: 0;
+    width: 13.5rem;
+    height: 50px;
+}
+
+.guest-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+.tag {
+    font-size: 0.75rem;
+    color: var(--tag-text);
+}
+
+#avatar {
+    border-radius: 50%;
+    margin: 0 0.5rem 0 0;
+}
+
+.footer::after {
+    content: '';
+    position: absolute;
+    top: 27px;
+    left: 25px;
+    border: solid 3px var(--footer-bg-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--green);
+    box-sizing: initial;
+}
