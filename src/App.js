@@ -95,6 +95,16 @@ function App() {
 			date: 'November 30th, 2021',
 			section: 'blog',
 		},
+		{
+			id: 8,
+			title: "and we're live",
+			body: [
+				"The website is officially live, and the source code is up on GitHub. Now my next plans for the site is to find a way to make the links (like my email/Github/Codepen url) to become hyperlinks. A friend of mine recommended using Regex, so I guess I have something new to learn 😅. But at this moment, I'm not going to make it a priority as finals are approaching. I'll definitely be working on it afterwards, though.",
+        "I did just run into a slight problem, though. I'm using GitHub and Netlify to host the site, and right now if you go to the blog section and refresh the page, Netfliy throws a 404 error. Not quit sure why that's the case, but I'll definitely have to get that sorted."
+			],
+			date: 'December 2nd, 2021',
+			section: 'blog',
+		},
 	])
 
 	const home = articles.filter((article) => article.section === 'home')
