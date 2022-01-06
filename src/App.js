@@ -5,12 +5,15 @@ import './styles.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
+	const anchor = "<b>"
+	const endAnchor = "</b>"
+
 	const [articles, setArticles] = useState([
 		{
 			id: 0,
-			title: 'welcome',
+			title: 'welcome 👋',
 			body: [
-				"Howdy, welcome to my Discord themed website! My name’s Colton, and I created this site to learn ReactJS, and boy was it a trip. Everything here is made from scratch, the only thing I took from Discord (other than the inspiration) is the color palette. If you’d like to see my progress updates, click the blog “server” on the left hand side, and you’ll see all my entries since the start of this project.",
+				`Howdy, welcome to my Discord themed website! My name’s Colton, and I created this site to learn ReactJS, and boy was it a trip. Everything here is made from scratch, the only thing I took from Discord (other than the inspiration) is the color palette. If you’d like to see my progress updates, click the blog “server” on the left hand side, and you’ll see all my entries since the start of this project.`,
 				"If you’d like to contact me for any reason, my email is leach.colton@hotmail.com.",
 				"A bit about me: I’m entirely self taught in web development, photoshop, video editing, and photography. I’ve been building computers since my teens, and playing video games since I was 4 years old. Back in 2006, I grew a soft spot for videography because of YouTube, and I would take my mom’s little point and shoot camera everywhere to record everything I did. Because of YouTube, I stumbled upon a community of 3D artists that used a combination of Photoshop, After Effects, and Cinema 4D, which resulted in me learning those programs to make YouTube backgrounds for my channel and for some friends. After I graduated high school, my mom gave me a hand-me-down Nikon DSLR, and I loved that little thing. Nearly everyday I’d walk around town taking pictures of whatever I thought was neat, and that eventually evolved into me getting brand new gear and doing a few photoshoots for family and friends. This was at the same time I truly started my software development journey.",
 				"I started learning how to program when I was 12 years old, but never did anything more than learn how to use loops, then in college I took a Java class that didn’t teach me anything more than how to use loops. I transferred to a different college and the next programming class I had to take was data structures and algorithms, so I had a LOT of catching up to do. Those were my only two programming classes, and I wasn’t really enjoying C++, so I decided to check out the web development side of things. A friend of mine showed me some stuff he did in React Native, and I was instantly hooked. I found some stuff from freeCodeCamp, wasn’t really getting it, then stumbled upon Bob Ziroll’s Scrimba course and dove head first in the deep end. After completing his course, I realized that my foundation was minuscule and would lead to problems down the road, so I decided to start from scratch. I focused primarily on HTML and CSS, watching a lot of Kevin Powell videos. I made a few small websites, then started learning how to design some stuff using Javascript and manipulating the DOM. After getting comfortable enough with that, I came back to React, and this was the first project I attempted.",
@@ -22,7 +25,7 @@ function App() {
 		},
 		{
 			id: 1,
-			title: 'idea for a new project',
+			title: 'idea for a project 💡',
 			body: [
 				"Alright hear me out, I need to get back on the React train, and Discord's user functionality is pretty cool. What if I made a Discord themed blog that had similar functionality? The different routes would be servers, the blog entries would be text channels, and each paragraph would be a message.",
 				"Hands down, I'll be able to do it in a week. I'm gonna focus on the styling and then work on the functionality once it looks pretty.",
@@ -55,7 +58,7 @@ function App() {
 		},
 		{
 			id: 4,
-			title: 'everything is fine',
+			title: 'everything is fine 🥴',
 			body: [
 				"This project might actually be a perfect project. It's been a few days, made some good progress, but now I ran into my first hurdle that's too tall for me. I can't exactly explain it in words without literally showing you the problem I'm having, but I'm learning a ton about React, plain Javascript, and the entire web development process in general.",
 				"The reason I think this is the perfect project for a newbie like me is because it's putting myself in a situation where I need to use a bunch of different features at once, and finding a way to make them all work together. The little projects I worked on before were things like 'make this number inside state increase/decrease', or 'use conditional rendering to show a <p> or an <h1>',  but this project has me working with multiple states, passing props all over the place, using React Router, and trying out the useEffect hook in React.",
@@ -97,13 +100,13 @@ function App() {
 		},
 		{
 			id: 8,
-			title: "and we're live",
+			title: "deployed and future plans",
 			body: [
-				"The website is officially live, and the source code is up on GitHub. Now my next plans for the site is to find a way to make the links (like my email/Github/Codepen url) to become hyperlinks. A friend of mine recommended using Regex, so I guess I have something new to learn 😅. But at this moment, I'm not going to make it a priority as finals are approaching. I'll definitely be working on it afterwards, though.",
-        "I did just run into a slight problem, though. I'm using GitHub and Netlify to host the site, and right now if you go to the blog section and refresh the page, Netfliy throws a 404 error. Not quit sure why that's the case, but I'll definitely have to get that sorted.",
-        "Alright that was actually the fasted fix I've ever done in my life. I just had to add a file in the public folder that tells Netlify to redirect the client when loading. Also this is my fourth commit and it has only taken maybe 30 seconds for each build. I'm pretty happy with how well this is turning out."
-			
-      ],
+				"The website is officially live, and the source code is up on GitHub. Now my next plans for the site is to find a way to make the links (like my email/Github/Codepen url) to become hyperlinks. A friend of mine recommended using Regex to parse the strings and slap in some conditional rendering, so I guess I have something new to learn 😅. But at this moment, I'm not going to make it a priority as finals are approaching. I'll definitely be working on it afterwards, though.",
+				"I did just run into a slight problem, though. I'm using GitHub and Netlify to host the site, and right now if you go to the blog section and refresh the page, Netfliy throws a 404 error. Not quit sure why that's the case, but I'll definitely have to get that sorted.",
+				"Alright that was actually the fasted fix I've ever done in my life. I just had to add a file in the public folder that tells Netlify to redirect the client when loading. Also this is my fourth commit and it has only taken maybe 30 seconds for each build. I'm pretty happy with how well this is turning out.",
+				"I'm also planning on adding some breakpoints for the styles to make it a bit more user friendly for mobile devices. That shouldn't be too difficult, as it functions rather well at the moment, it's just the elements are a bit wacky right now due to the scaling."
+			],
 			date: 'December 2nd, 2021',
 			section: 'blog',
 		},
