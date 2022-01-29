@@ -5,20 +5,17 @@ import './styles.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
-	const anchor = "<b>"
-	const endAnchor = "</b>"
-
 	const [articles, setArticles] = useState([
 		{
 			id: 0,
 			title: 'welcome 👋',
 			body: [
 				`Howdy, welcome to my Discord themed website! My name’s Colton, and I created this site to learn ReactJS, and boy was it a trip. Everything here is made from scratch, the only thing I took from Discord (other than the inspiration) is the color palette. If you’d like to see my progress updates, click the blog “server” on the left hand side, and you’ll see all my entries since the start of this project.`,
-				"If you’d like to contact me for any reason, my email is leach.colton@hotmail.com.",
+				`If you’d like to contact me for any reason, my email is <a class="hypertext" href="mailto:leach.colton@hotmail.com">leach.colton@hotmail.com</a>.<span class="edited"></span>`,
 				"A bit about me: I’m entirely self taught in web development, photoshop, video editing, and photography. I’ve been building computers since my teens, and playing video games since I was 4 years old. Back in 2006, I grew a soft spot for videography because of YouTube, and I would take my mom’s little point and shoot camera everywhere to record everything I did. Because of YouTube, I stumbled upon a community of 3D artists that used a combination of Photoshop, After Effects, and Cinema 4D, which resulted in me learning those programs to make YouTube backgrounds for my channel and for some friends. After I graduated high school, my mom gave me a hand-me-down Nikon DSLR, and I loved that little thing. Nearly everyday I’d walk around town taking pictures of whatever I thought was neat, and that eventually evolved into me getting brand new gear and doing a few photoshoots for family and friends. This was at the same time I truly started my software development journey.",
-				"I started learning how to program when I was 12 years old, but never did anything more than learn how to use loops, then in college I took a Java class that didn’t teach me anything more than how to use loops. I transferred to a different college and the next programming class I had to take was data structures and algorithms, so I had a LOT of catching up to do. Those were my only two programming classes, and I wasn’t really enjoying C++, so I decided to check out the web development side of things. A friend of mine showed me some stuff he did in React Native, and I was instantly hooked. I found some stuff from freeCodeCamp, wasn’t really getting it, then stumbled upon Bob Ziroll’s Scrimba course and dove head first in the deep end. After completing his course, I realized that my foundation was minuscule and would lead to problems down the road, so I decided to start from scratch. I focused primarily on HTML and CSS, watching a lot of Kevin Powell videos. I made a few small websites, then started learning how to design some stuff using Javascript and manipulating the DOM. After getting comfortable enough with that, I came back to React, and this was the first project I attempted.",
+				"I started learning how to program when I was 12 years old, but never did anything more than learn how to use loops, then in college I took a Java class that didn’t teach me anything more than how to use loops. I transferred to a different college and the next programming class I had to take was data structures and algorithms, so I had a <b>lot</b> of catching up to do. Those were my only two programming classes, and I wasn’t really enjoying C++, so I decided to check out the web development side of things. A friend of mine showed me some stuff he did in React Native, and I was instantly hooked. I found some stuff from freeCodeCamp, wasn’t really getting it, then stumbled upon Bob Ziroll’s Scrimba course and dove head first in the deep end. After completing his course, I realized that my foundation was minuscule and would lead to problems down the road, so I decided to start from scratch. I focused primarily on HTML and CSS, watching a lot of Kevin Powell videos. I made a few small websites, then started learning how to design some stuff using Javascript and manipulating the DOM. After getting comfortable enough with that, I came back to React, and this was the first project I attempted.",
 				"I think it turned out pretty well 😀",
-				"Currently all of the blog data stored in an object, so I'm not sure how to handle links and creating them as hyperlinks. In the meantime, my GitHub: https://github.com/coltonleach/. Codepen: https://codepen.io/issvor/",
+        `Here's my <a class="hypertext" href="https://github.com/coltonleach/">GitHub</a>, and here's my <a class="hypertext" href="https://codepen.io/issvor/">Codepen</a><span class="edited"></span>`
 			],
 			date: 'October 24th, 2021',
 			section: 'home',
@@ -61,7 +58,7 @@ function App() {
 			title: 'everything is fine 🥴',
 			body: [
 				"This project might actually be a perfect project. It's been a few days, made some good progress, but now I ran into my first hurdle that's too tall for me. I can't exactly explain it in words without literally showing you the problem I'm having, but I'm learning a ton about React, plain Javascript, and the entire web development process in general.",
-				"The reason I think this is the perfect project for a newbie like me is because it's putting myself in a situation where I need to use a bunch of different features at once, and finding a way to make them all work together. The little projects I worked on before were things like 'make this number inside state increase/decrease', or 'use conditional rendering to show a <p> or an <h1>',  but this project has me working with multiple states, passing props all over the place, using React Router, and trying out the useEffect hook in React.",
+				"The reason I think this is the perfect project for a newbie like me is because it's putting myself in a situation where I need to use a bunch of different features at once, and finding a way to make them all work together. The little projects I worked on before were things like 'make this number inside state increase/decrease', or 'use conditional rendering to show a p tag or an h1 tag', but this project has me working with multiple states, passing props all over the place, using React Router, and trying out the useEffect hook in React.",
 				"Basically, the learning process is a big rough, but I am learning so much right now and am having a blast with it. Except for this dumb little issue I'm having, and it's quite literally the only thing holding me back from finishing this project."
 			],
 			date: 'November 3rd, 2021',
@@ -81,10 +78,25 @@ function App() {
 			title: 'and im back',
 			body: [
 				"Oh man, I don't even recognize this project anymore. It's only been twenty days, but this might take a while to get back in the groove of things.",
-				"Oh my lord I figured out my problem and fixed it! I knew I was over thinking it, but man this is embarrassing. I don't know exactly how to explain the problem over text without showing the code, but I'll try my best.",
-				"I have the blogs stored in state, and whenever I load the website, the blogs get filtered to their respective location and get passed down through props. So far so good. I have a function where when you click a channel, it updates a local state in the channels component and stores which channel is active. I have a useEffect hook that is supposed to set state back to its initial values so that the first channel is always selected whenever you select a server. Well for some reason state wouldn't get initialized back to its default values, causing all sorts of problems with selecting a channel. After hours of staring at my screen and dozens of console logs, I finally realized it's because I set the wrong value in the useEffect hook. Instead of setting it back to the default values, I was using the previously stored values in state, and simply reassigning state to the previous values.",
-				"It's actually embarrassing how I didn't catch it from the beginning, but now that I have it functioning properly, I can finally finish this website and publish it!",
-			],
+				`Oh my lord I figured out my problem and fixed it! I knew I was over thinking it, but man this is embarrassing. <s>I don't know exactly how to explain the problem over text without showing the code, but I'll try my best.</s> I figured out how to add code snippets, so it's a bit easier to understand now 😁. <span class="edited"></span>`,
+				`I have the blogs stored in state, and whenever I load the website, the blogs get filtered to their respective location and get passed down through props. So far so good. I have a function where when you click a channel, it updates a local state in the channels component and stores which channel is active. I have a useEffect hook that is supposed to set state back to its initial values so that the first channel is always selected whenever you select a server.<code><pre>
+useEffect(() => {
+  setActiveChannel({
+    ...activeChannel,
+    activeObject: activeChannel.objects[index],
+    objects: articles,
+  })
+}, [articles])</pre></code>
+        Well for some reason state wouldn't get initialized back to its default values, causing all sorts of problems with selecting a channel. After hours of staring at my screen and dozens of console logs, I finally realized it's because I set the wrong value in the useEffect hook. Instead of setting it back to the default values, I was using the previously stored values in state, and simply reassigning state to the previous values. Here's what it should be: <code><pre>
+useEffect(() => {
+  setActiveChannel({
+    ...activeChannel,
+    activeObject: articles[0],
+    objects: articles,
+  })
+}, [articles])</pre></code><span class="edited"></span>`,
+        "It's actually embarrassing how I didn't catch it from the beginning, but now that I have it functioning properly, I can finally finish this website and publish it!",
+      ],
 			date: 'November 28th, 2021',
 			section: 'blog',
 		},
@@ -110,6 +122,19 @@ function App() {
 			date: 'December 2nd, 2021',
 			section: 'blog',
 		},
+    {
+      id: 9,
+      title: "long time no see 👴",
+      body: [
+        `So I've been pretty busy, as of late. I got a job at the beginning of the month. I moved a few days ago (which was a living nightmare. Mistakes were made, lessons were learned). And I finally learned how to style the messages!`,
+        `I took a break from the project to focus on some more important matters, but I found some free time, so I thought why not hop back on and try to figure out how to style my messages (or at the very least, add hyperlinks). I was searching around blindly, and eventually found a solution to my problem.`,
+        `There isn't much more to this project, except to kind of polish it up a bit. I've been following an online course to learn the MERN stack through FullOpenStack, and have reach part 3. I now have a true appreciation for people that do backend work, cause boy it's tedious. It's also extremely rewarding.`,
+        `In part 3, I'm learning NodeJS/Express, and how to communicate with the backend using HTTP request methods. And because of it, I think I'm gonna turn this project into more of a sandbox and keep adding to it. It probably won't change at all visually, but the backend will definitely get a facelift. My name goal at this moment is to not have all the data stored as in JSON format.`,
+        `Overall, 2022 is looking great so far, and I'm really excited to see where I'll be at the end of the year. This year is mine, and no one is taking that away from me.`
+      ],
+      date: "January 28, 2022",
+      section: 'blog',
+    },
 	])
 
 	const home = articles.filter((article) => article.section === 'home')

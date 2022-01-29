@@ -16,6 +16,9 @@
     --footer-bg-color: rgb(35, 39, 42);
     --chat-bg-color: rgba(255, 255, 255, 0.05);
     --green: rgb(67, 181, 129);
+    --hyperlink: rgb(10, 164, 197);
+    --code-bg-color: rgb(47, 49, 54);
+    --code-border-color: rgb(32, 34, 37);
     --transition: all ease 250ms;
 }
 
