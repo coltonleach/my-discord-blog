@@ -7,9 +7,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 function App() {
 	const [home, setHome] = useState(null)
 	const [blog, setBlog] = useState(null)
-  const [loading, setLoading] = useState(true)
   
-  const baseUrl = '/api/articles'
+  const baseUrl = 'https://dry-bayou-39878.herokuapp.com/api/articles'
   
   useEffect(()=> {
     fetch(baseUrl)
@@ -17,12 +16,8 @@ function App() {
       .then(data => {
         setHome(data.filter(article => article.section === 'home'))
         setBlog(data.filter(article => article.section === 'blog'))
-        setLoading(false)
       })
   }, [])
-
-
-
 
 	return (
     <>
