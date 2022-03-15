@@ -5,8 +5,21 @@ import './styles.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
+  const [initialScreen, setInitialScreen] = useState([
+    {
+      id: 0,
+      title: 'sorry for the delay',
+      body: [
+        `Hi, welcome to my website! If you're seeing this, it means that my database is still processing some data, but will show you the blog posts soon!`,
+        `Have a great day 😁`
+      ],
+      date: 'March 15, 2022',
+      section: 'home'
+    }
+  ])
 	const [home, setHome] = useState(null)
 	const [blog, setBlog] = useState(null)
+  const [loading, setLoading] = useState(true)
   
   const baseUrl = 'https://dry-bayou-39878.herokuapp.com/api/articles'
   
@@ -16,6 +29,7 @@ function App() {
       .then(data => {
         setHome(data.filter(article => article.section === 'home'))
         setBlog(data.filter(article => article.section === 'blog'))
+        setLoading(false)
       })
   }, [])
 
@@ -23,14 +37,17 @@ function App() {
     <>
 			<Router>
 				<NavBar />
-				<Switch>
+				{loading
+        ? <Container articles={initialScreen} />
+        :
+          <Switch>
 					<Route exact path="/">
 						{home && <Container articles={home} />}
 					</Route>
 					<Route path="/blog">
 						{blog && <Container articles={blog} />}
 					</Route>
-				</Switch>
+				</Switch>}
 			</Router>
 		</>
 	)

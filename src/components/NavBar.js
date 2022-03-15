@@ -7,11 +7,11 @@ function NavBar() {
 		<div className="navbar">
 			<ul className="icons">
 				<NavLink activeClassName="active" exact to="/">
-					<li id="home">H</li>
+					<li id="home">H</li><span className='tooltip-text'>home</span>
 				</NavLink>
 				<div className="divider"></div>
 				<NavLink activeClassName="active" to="/blog">
-					<li id="blog">B</li>
+					<li id="blog">B</li><span className='tooltip-text'>blog</span>
 				</NavLink>
 			</ul>
 		</div>
