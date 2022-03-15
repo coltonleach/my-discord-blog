@@ -34,7 +34,7 @@ function Container({ articles }) {
 
 	let messageBody = activeChannel.activeObject.body
 	let messageTimestamp = activeChannel.activeObject.date
-    let messageTitle = activeChannel.activeObject.title
+  let messageTitle = activeChannel.activeObject.title
 
 	return (
 		<div className="container">
@@ -55,7 +55,7 @@ function Container({ articles }) {
 				</div>
 			</div>
 
-            <MainWindow messageTitle={messageTitle} messageBody={messageBody} messageTimestamp={messageTimestamp}/>
+      <MainWindow messageTitle={messageTitle} messageBody={messageBody} messageTimestamp={messageTimestamp}/>
 			<Footer />
 		</div>
 	)

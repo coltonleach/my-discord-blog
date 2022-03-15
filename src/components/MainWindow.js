@@ -15,14 +15,14 @@ function MainWindow({messageTitle, messageBody, messageTimestamp}) {
         <div className="message-window">
             <div className="message-container">
                 {messageBody.map((message, index)=> (
-                  <>
+                  <div key={index}>
                     <div className="message-info">
                         <img className="message-avatar" src={avatar} alt="avatar"/>
                         <p className="message-name">Colton Leach</p>
                         <p className="message-time">{messageTimestamp}</p>
                     </div>
-                    <p key={index} className="message" dangerouslySetInnerHTML={{__html: message}}></p>
-                  </>
+                    <p className="message" dangerouslySetInnerHTML={{__html: message}}></p>
+                  </div>
                 ))}
             </div>
         </div>
