@@ -8,9 +8,9 @@ function App() {
   const [initialScreen, setInitialScreen] = useState([
     {
       id: 0,
-      title: 'sorry for the delay',
+      title: 'the blogs got lost',
       body: [
-        `Hi, welcome to my website! If you're seeing this, it means that my database is still processing some data, but will show you the blog posts soon!`,
+        `Hi, welcome to my website! If you're seeing this, it means the blogs are on their way and should be here shortly!`,
         `Have a great day 😁`
       ],
       date: 'March 15, 2022',
