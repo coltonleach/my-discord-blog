@@ -23,6 +23,18 @@
 
 .channel-wrapper {
   padding-top: 1rem;
+  overflow-y: scroll;
+  height: calc(100% - 100px);
+  scrollbar-width: thin;
+}
+
+.channel-wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+
+.channel-wrapper::-webkit-scrollbar-thumb {
+  background-color: #1f1f1f;
+  border-radius: 1rem;
 }
 
 .channel {
@@ -39,7 +51,7 @@
 }
 
 .channel::before {
-  content: "#";
+  content: '#';
   font-size: 1.125rem;
   color: var(--secondary-text);
 }
@@ -47,9 +59,9 @@
 .channel:hover {
   background-color: var(--sidebar-hover);
   color: var(--primary-text);
-} 
+}
 
 .channel-active {
   background-color: var(--main-bg-color);
-  color: var(--primary-text)
+  color: var(--primary-text);
 }
